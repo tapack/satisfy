@@ -5,7 +5,7 @@
     <!-- The basics -->
     <groupId>io.tapack</groupId>
     <artifactId>satisfy</artifactId>
-    <version>0.6.6</version>
+    <version>0.6.7-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <dependencyManagement>
@@ -652,7 +652,7 @@
         <connection>scm:git:ssh://git@github.com/tapack/satisfy.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/tapack/satisfy.git</developerConnection>
         <url>https://github.com/tapack/satisfy.git</url>
-        <tag>0.6.6</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
