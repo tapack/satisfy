@@ -1,0 +1,4 @@
+io.tapack.satisfy.steps.email.InboxMessagesInspectorPOP3S
+io.tapack.satisfy.steps.email.InboxMessagesInspectorPOP3
+io.tapack.satisfy.steps.email.InboxMessagesInspectorIMAP
+io.tapack.satisfy.steps.email.InboxMessagesInspectorIMAPS

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<users>
+    <ns2:user xmlns:ns2="http://www.example.org/bar">
+        <email>john@hascode.com</email>
+        <firstName>John</firstName>
+        <id>1</id>
+        <lastName>Testerman</lastName>
+    </ns2:user>
+    <ns2:user xmlns:ns2="http://www.example.org/bar">
+        <email>marta@hascode.com</email>
+        <id>2</id>
+        <lastName>Banderos</lastName>
+    </ns2:user>
+    <ns2:user xmlns:ns2="http://www.example.org/bar">
+        <email>fabricio@gmail.com</email>
+        <id>4</id>
+        <lastName>Junasti</lastName>
+    </ns2:user>
+    <ns2:user xmlns:ns2="http://www.example.org/bar">
+        <email>joan.smith@gmail.com</email>
+        <firstName>Joan</firstName>
+        <id>5</id>
+        <lastName>Smith</lastName>
+    </ns2:user>
+</users>

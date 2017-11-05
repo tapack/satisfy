@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Static Example</title>
+</head>
+<body>
+<div id="header">
+    <h1>Static Example</h1>
+</div>
+<div id="content">
+    <form id="login-form">
+        <label id="login-label" for="login">Enter login:</label>
+        <input id="login" name="login" type="text"/>
+        <label id="login-password" for="password">Enter password:</label>
+        <input id="password" name="login" type="password"/>
+        <input id="verify" name="verify" type="submit"/>
+    </form>
+    <button>Test Button</button>
+    <hr/>
+    <div>
+        <label id="variableLabel" for="sayInput">Variable</label>
+        <input id="sayInput" type="text"/>
+        <button id="sayButton">Say</button>
+    </div>
+    <div id="drop-down-header">
+        <h1>Static drop - down example</h1>
+    </div>
+    <div align="left">
+        <select id="cars" name="dropDownExample">
+            <option value="BMW">BMW</option>
+            <option value="Audi">Audi</option>
+            <option value="Volkswagen">Volkswagen</option>
+        </select>
+    </div>
+    <hr/>
+    <div>
+        <div>Radio button</div>
+        <p>
+            <input id="radic" type="radio" value="deep"><label for="radic">RadioButton</label>
+            <label id="checked" style="display: none;">Checked</label>
+        </p>
+    </div>
+    <hr>
+    <div id="submitted">
+        <label id="said">Page says:</label>
+        <label id="saidWord"></label>
+    </div>
+    <hr>
+    <div>Buttons and links</div>
+    <p>
+        <a id="go-link" href="#">Go Link</a>
+        <button id="go-button">Go Button</button>
+        <input id="go-input-button" type="button" value="Go input type button">
+        <input id="go-input-submit" type="submit" value="Go input type submit">
+    </p>
+    <div id="info">Not Go</div>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script>
+        $("#radic").click(function () {
+            $("#checked").show();
+        });
+        $("#sayButton").click(function () {
+            $("#saidWord").text($("#sayInput").val());
+        });
+        var addClickTo = function (id, text) {
+            $(id).click(function () {
+                $("#info").text(text);
+            });
+        };
+        var addClickToButton = function (id) {
+            addClickTo(id, $(id).text());
+        };
+        var addClickToInput = function (id) {
+            addClickTo(id, $(id).val());
+        };
+        addClickToButton("#go-link");
+        addClickToButton("#go-button");
+        addClickToInput("#go-input-button");
+        addClickToInput("#go-input-submit");
+    </script>
+</div>
+</body>
+</html>

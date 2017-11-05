@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <ns2:getWeatherInformationResponse xmlns:ns2="http://services.showcase.acceptancetest.tapack.io/">
+            <return>Hi this is fake weather webservice.</return>
+        </ns2:getWeatherInformationResponse>
+    </soap:Body>
+</soap:Envelope>

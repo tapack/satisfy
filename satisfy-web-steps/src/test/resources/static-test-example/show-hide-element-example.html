@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Show and Hide Elements</title>
+</head>
+<body>
+<output id="text-area-loader" class="ui-text-loader"
+        style="visibility: hidden; font-size: 55px; color: red">LABEL
+</output>
+<br/>
+<output id="text-area-image" class="ui-text-image"
+        style="visibility: hidden; font-size: 55px; color: green">IMAGE
+</output>
+<br/>
+<button id="showElementButton" class="ui-state-default ui-corner-all"
+        onclick="showAreaLoader()">Show element
+</button>
+<script>
+    function showAreaLoader() {
+        hideAreaImage();
+        document.getElementById("text-area-loader").style.visibility = "visible"
+        window.setTimeout(hideAreaLoader, 200);
+    }
+
+    function showImage() {
+        document.getElementById("text-area-image").style.visibility = "visible"
+    }
+
+    function hideAreaLoader() {
+        document.getElementById("text-area-loader").style.visibility = "hidden"
+        window.setTimeout(showImage, 200);
+    }
+
+    function hideAreaImage() {
+        document.getElementById("text-area-image").style.visibility = "hidden"
+    }
+</script>
+</body>
+</html>

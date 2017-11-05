@@ -1,0 +1,26 @@
+{
+  "user": [
+    {
+      "email": "john@hascode.com",
+      "firstName": "John",
+      "id": "1",
+      "lastName": "Testerman"
+    },
+    {
+      "email": "marta@hascode.com",
+      "id": "2",
+      "lastName": "Banderos"
+    },
+    {
+      "email": "fabricio@gmail.com",
+      "id": "4",
+      "lastName": "Junasti"
+    },
+    {
+      "email": "joan.smith@gmail.com",
+      "firstName": "Joan",
+      "id": "5",
+      "lastName": "Smith"
+    }
+  ]
+}

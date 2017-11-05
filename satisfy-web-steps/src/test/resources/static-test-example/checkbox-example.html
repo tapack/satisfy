@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Checkbox Example</title>
+    <script>
+        function checkboxStatus() {
+            var checkbox = document.getElementById("check");
+            var label = document.getElementById("status");
+            if(checkbox.checked){
+                label.innerHTML = "Checked";
+            } else {
+                label.innerHTML = "Unchecked";
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="header">
+    <h1>Checkbox Example</h1>
+</div>
+<div id="content">
+    <input id="check" type="checkbox" onchange="checkboxStatus()"/>
+    <label id="status" for="check">Unchecked</label>
+</div>
+</body>
+</html>

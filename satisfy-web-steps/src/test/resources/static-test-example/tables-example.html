@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("button").click(function (e) {
+                var parent_tr = $(e.target).parents("tr");
+                var td_without_children_array = parent_tr.find("td:not(:has(*))").toArray();
+                change_elements_content(td_without_children_array);
+            });
+
+            function change_elements_content(elements) {
+                for (var i = 0; i < elements.length; i++) {
+                    var old_text = elements[i].innerHTML;
+                    elements[i].innerHTML = 'New ' + old_text;
+                }
+            }
+
+        });
+    </script>
+
+    <style type="text/css">
+        .tg {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .tg td {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            padding: 10px 5px;
+            border-style: solid;
+            border-width: 1px;
+            overflow: hidden;
+            word-break: normal;
+        }
+
+        .tg th {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            padding: 10px 5px;
+            border-style: solid;
+            border-width: 2px;
+            overflow: hidden;
+            word-break: normal;
+        }
+    </style>
+</head>
+
+<body>
+<div id="test_value">Value5.3</div>
+<table id="table_simple" class="tg">
+    <thead>
+    <tr>
+        <th>Table_Head1</th>
+        <th>Table_Head2</th>
+        <th>Table_Head3</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td class="tg-031e">Value1.1</td>
+        <td class="tg-031e">Value2.1</td>
+        <td class="tg-031e">Value3.1</td>
+    </tr>
+    <tr>
+        <td class="tg-031e">
+            <button>Table Simple</button>
+        </td>
+        <td class="tg-031e">Value2.2</td>
+        <td class="tg-031e">Value3.3</td>
+    </tr>
+    <tr>
+        <td class="tg-031e">
+            <button>Table Simple</button>
+        </td>
+        <td class="tg-031e">Value2.2</td>
+        <td class="tg-031e">Value3.3</td>
+    </tr>
+    <tr>
+        <td class="tg-031e">Value1.3</td>
+        <td class="tg-031e">Value2.3</td>
+        <td class="tg-031e">Value3.3</td>
+    </tr>
+    <tr>
+        <td class="tg-031e"></td>
+        <td class="tg-031e"></td>
+        <td class="tg-031e"></td>
+    </tr>
+    </tbody>
+</table>
+
+<br/>
+
+<table id="table_advanced" class="tg">
+    <thead>
+    <tr>
+        <th class="tg-031e">Column1</th>
+        <th class="tg-031e">Column2</th>
+        <th class="tg-031e">Column3</th>
+        <th class="tg-031e">Column4</th>
+        <th class="tg-031e">Column5</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td class="tg-031e">Value1.1</td>
+        <td class="tg-031e">Value2.1</td>
+        <td class="tg-031e">Value3.1</td>
+        <td class="tg-031e">Value4.1</td>
+        <td class="tg-031e">Value5.1</td>
+    </tr>
+    <tr>
+        <td class="tg-031e">Value1.2</td>
+        <td class="tg-031e">Value2.2</td>
+        <td class="tg-031e">Value3.3</td>
+        <td class="tg-031e">Value4.2</td>
+        <td class="tg-031e">Value5.2</td>
+    </tr>
+    <tr>
+        <td class="tg-031e" colspan="3">Subtable_1</td>
+        <td class="tg-031e">
+            <button>Table Advanced</button>
+        </td>
+        <td class="tg-031e">Value5.3</td>
+    </tr>
+    <tr>
+        <td class="tg-031e">Value1.1.1</td>
+        <td class="tg-031e" colspan="2">Value2.1.1</td>
+        <td class="tg-031e">Value4.4</td>
+        <td class="tg-031e">Value5.4</td>
+    </tr>
+    <tr>
+        <td class="tg-031e">Value1.1.2</td>
+        <td class="tg-031e" colspan="2">Value2.1.2</td>
+        <td class="tg-031e">Value4.5</td>
+        <td class="tg-031e">Value5.5</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <ns2:getWeatherForResponse xmlns:ns2="http://services.showcase.acceptancetest.tapack.io/">
+            <return>Sunny!</return>
+        </ns2:getWeatherForResponse>
+    </soap:Body>
+</soap:Envelope>

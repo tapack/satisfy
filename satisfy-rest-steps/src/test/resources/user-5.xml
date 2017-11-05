@@ -1,0 +1,6 @@
+<ns2:user xmlns:ns2="http://www.example.org/bar">
+    <id>5</id>
+    <firstName>Joan</firstName>
+    <lastName>Smith</lastName>
+    <email>joan.smith@gmail.com</email>
+</ns2:user>

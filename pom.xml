@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- The basics -->
+    <groupId>io.tapack</groupId>
+    <artifactId>satisfy</artifactId>
+    <version>0.6.6-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Satisfy Frameworks Modules -->
+            <dependency>
+                <groupId>io.tapack</groupId>
+                <artifactId>satisfy-commons</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.tapack</groupId>
+                <artifactId>satisfy-data-steps</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.tapack</groupId>
+                <artifactId>satisfy-web-steps</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.tapack</groupId>
+                <artifactId>satisfy-soap-steps</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.tapack</groupId>
+                <artifactId>satisfy-rest-steps</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.tapack</groupId>
+                <artifactId>satisfy-file-steps</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.tapack</groupId>
+                <artifactId>satisfy-email-steps</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!-- Satisfy Frameworks Dependencies -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${version.junit}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.thucydides</groupId>
+                <artifactId>thucydides-core</artifactId>
+                <version>${version.thucydides}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.github.detro.ghostdriver</groupId>
+                        <artifactId>phantomjsdriver</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.opera</groupId>
+                        <artifactId>operadriver</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.codeborne</groupId>
+                <artifactId>phantomjsdriver</artifactId>
+                <version>${version.phantomjsdriver}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.seleniumhq.selenium</groupId>
+                        <artifactId>selenium-java</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.seleniumhq.selenium</groupId>
+                        <artifactId>selenium-remote-driver</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.opera</groupId>
+                <artifactId>operadriver</artifactId>
+                <version>${version.operadriver}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.seleniumhq.selenium</groupId>
+                        <artifactId>selenium-remote-driver</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.seleniumhq.selenium</groupId>
+                        <artifactId>selenium-java</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.google.guava</groupId>
+                        <artifactId>guava</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.commons</groupId>
+                        <artifactId>commons-exec</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.jbehave</groupId>
+                <artifactId>jbehave-core</artifactId>
+                <version>${version.jbehave-core}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>jbehave-junit-runner</artifactId>
+                <version>${version.jbehave-junit-runner}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.reflections</groupId>
+                <artifactId>reflections</artifactId>
+                <version>${version.reflections}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-java</artifactId>
+                <version>${version.selenium}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>htmlunit-driver</artifactId>
+                <version>${htmlunit-driver.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.thucydides</groupId>
+                <artifactId>thucydides-junit</artifactId>
+                <version>${version.thucydides}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${version.commons-lang3}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-exec</artifactId>
+                <version>${version.commons-exec}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest-all</artifactId>
+                <version>${version.hamcrest-all}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${version.httpclient}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.jersey</groupId>
+                <artifactId>jersey-server</artifactId>
+                <version>${version.jersey}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.jersey</groupId>
+                <artifactId>jersey-core</artifactId>
+                <version>${version.jersey}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.jersey</groupId>
+                <artifactId>jersey-json</artifactId>
+                <version>${version.jersey}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jayway.restassured</groupId>
+                <artifactId>rest-assured</artifactId>
+                <version>${version.rest-assured}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.javacrumbs.json-unit</groupId>
+                <artifactId>json-unit</artifactId>
+                <version>${json-unit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xmlunit</groupId>
+                <artifactId>xmlunit</artifactId>
+                <version>${version.xmlunit}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-frontend-jaxws</artifactId>
+                <version>${version.cxf-rt-frontend-jaxws}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-transports-http-jetty</artifactId>
+                <version>${version.cxf-rt-frontend-jaxws}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-api</artifactId>
+                <version>${cxf-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${version.spring-context}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.itextpdf</groupId>
+                <artifactId>itextpdf</artifactId>
+                <version>${version.itextpdf}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.mail</groupId>
+                <artifactId>mail</artifactId>
+                <version>${version.mail}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.icegreen</groupId>
+                <artifactId>greenmail</artifactId>
+                <version>${version.greenmail}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${version.commons-fileupload}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-io</groupId>
+                        <artifactId>commons-io</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <!-- SLF4J Simple Binding -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-simple</artifactId>
+                <version>${version.slf4j}</version>
+            </dependency>
+            <!-- CODE QUALITY -->
+            <!-- FindBugs Annotations -->
+            <dependency>
+                <groupId>findbugs</groupId>
+                <artifactId>annotations</artifactId>
+                <version>${version.findbugs-annotations}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>satisfy-commons</module>
+        <module>satisfy-data-steps</module>
+        <module>satisfy-plugins</module>
+        <module>satisfy-web-steps</module>
+        <module>satisfy-soap-steps</module>
+        <module>satisfy-rest-steps</module>
+        <module>satisfy-file-steps</module>
+        <module>satisfy-email-steps</module>
+    </modules>
+
+    <properties>
+        <main.basedir>${project.basedir}</main.basedir>
+        <!-- Don't let your Mac use a crazy non-standard encoding -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- Java Language version -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <!-- Satisfy Frameworks Dependencies -->
+        <version.junit>4.11</version.junit>
+        <version.thucydides>0.9.275</version.thucydides>
+        <version.jbehave-core>3.9.3</version.jbehave-core>
+        <version.jbehave-junit-runner>1.1.2</version.jbehave-junit-runner>
+        <version.selenium>2.53.0</version.selenium>
+        <htmlunit-driver.version>2.20</htmlunit-driver.version>
+        <version.hamcrest-all>1.3</version.hamcrest-all>
+        <version.commons-lang3>3.3.2</version.commons-lang3>
+        <version.commons-exec>1.3</version.commons-exec>
+        <version.reflections>0.9.9</version.reflections>
+        <version.httpclient>4.3.3</version.httpclient>
+        <version.phantomjsdriver>1.2.1</version.phantomjsdriver>
+        <version.operadriver>1.4</version.operadriver>
+        <version.commons-fileupload>1.3</version.commons-fileupload>
+        <version.jersey>1.9</version.jersey>
+        <version.rest-assured>2.4.0</version.rest-assured>
+        <json-unit.version>1.11.0</json-unit.version>
+        <version.xmlunit>1.5</version.xmlunit>
+        <cxf-api.version>2.7.8</cxf-api.version>
+        <version.cxf-rt-frontend-jaxws>3.1.6</version.cxf-rt-frontend-jaxws>
+        <version.spring-context>3.2.5.RELEASE</version.spring-context>
+        <version.itextpdf>5.3.4</version.itextpdf>
+        <version.mail>1.4.6</version.mail>
+        <version.greenmail>1.3.1b</version.greenmail>
+        <!-- Logger version -->
+        <version.slf4j>1.7.12</version.slf4j>
+
+        <!-- MAVEN -->
+        <!-- Maven core plugin versions -->
+        <version.maven-clean-plugin>2.6.1</version.maven-clean-plugin>
+        <version.maven-compiler-plugin>3.3</version.maven-compiler-plugin>
+        <version.maven-deploy-plugin>2.8.2</version.maven-deploy-plugin>
+        <version.maven-failsafe-plugin>2.18.1</version.maven-failsafe-plugin>
+        <version.maven-install-plugin>2.5.2</version.maven-install-plugin>
+        <version.maven-resources-plugin>2.7</version.maven-resources-plugin>
+        <version.maven-site-plugin>3.4</version.maven-site-plugin>
+        <version.maven-surefire-plugin>2.18.1</version.maven-surefire-plugin>
+        <!-- Maven packaging plugin versions -->
+        <version.maven-jar-plugin>2.6</version.maven-jar-plugin>
+        <version.maven-war-plugin>2.6</version.maven-war-plugin>
+        <version.maven-source-plugin>2.4</version.maven-source-plugin>
+        <!-- Maven reporting plugin versions -->
+        <version.maven-checkstyle-plugin>2.15</version.maven-checkstyle-plugin>
+        <version.maven-javadoc-plugin>2.10.3</version.maven-javadoc-plugin>
+        <version.maven-jxr-plugin>2.5</version.maven-jxr-plugin>
+        <version.maven-pmd-plugin>3.4</version.maven-pmd-plugin>
+        <!-- Maven tools plugin versions -->
+        <version.maven-dependency-plugin>2.10</version.maven-dependency-plugin>
+        <version.maven-gpg-plugin>1.6</version.maven-gpg-plugin>
+        <version.maven-release-plugin>2.5.2</version.maven-release-plugin>
+
+        <!-- CODE QUALITY CHECK -->
+        <!-- Code quality check maven plugin versions -->
+        <version.checkstyle>6.6</version.checkstyle>
+        <version.findbugs-maven-plugin>3.0.1</version.findbugs-maven-plugin>
+        <version.findbugs-annotations>1.0.0</version.findbugs-annotations>
+
+        <!-- FUNCTIONAL CHECK -->
+        <!-- Skip tests flag -->
+        <skipTests />
+        <version.cargo-maven2-plugin>1.4.12</version.cargo-maven2-plugin>
+        <version.jetty-maven-plugin>9.2.11.M0</version.jetty-maven-plugin>
+        <!-- Browser for tests: chrome, firefox, htmlunit, ie, phantomjs -->
+        <browser>phantomjs</browser>
+        <version.phantomjs>1.9.8</version.phantomjs>
+        <version.phantomjs-maven-plugin>0.5</version.phantomjs-maven-plugin>
+
+        <!-- CODE COVERAGE CHECK -->
+        <version.jacoco-maven-plugin>0.7.4.201502262128</version.jacoco-maven-plugin>
+    </properties>
+
+    <!-- Build settings -->
+    <build>
+        <plugins>
+            <!-- The Source Plugin creates a jar archive of the source files of
+                 the current project. The jar file is, by default, created in
+                 the project's target directory. -->
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <!-- The Clean Plugin is used when you want to remove files
+                     generated at build-time in a project's directory. -->
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>${version.maven-clean-plugin}</version>
+                </plugin>
+                <!-- The Compiler Plugin is used to compile the sources of your
+                     project. -->
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${version.maven-compiler-plugin}</version>
+                </plugin>
+                <!-- Provides utility goals to work with dependencies like
+                     copying, unpacking, analyzing, resolving and many
+                     more. -->
+                <plugin>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>${version.maven-dependency-plugin}</version>
+                </plugin>
+                <!-- The deploy plugin is primarily used during the deploy
+                     phase, to add your artifact(s) to a remote repository for
+                     sharing with other developers and projects. -->
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>${version.maven-deploy-plugin}</version>
+                </plugin>
+                <!-- Signs the project artifacts with GnuPG. -->
+                <plugin>
+                    <artifactId>maven-gpg-plugin</artifactId>
+                    <version>${version.maven-gpg-plugin}</version>
+                </plugin>
+                <!-- This plugin provides the capability to build and sign
+                     jars. -->
+                <plugin>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${version.maven-jar-plugin}</version>
+                </plugin>
+                <!-- The Javadoc Plugin uses the Javadoc tool to generate
+                     javadocs for the specified project. -->
+                <plugin>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>${version.maven-javadoc-plugin}</version>
+                </plugin>
+                <!-- The Install Plugin is used during the install phase to add
+                     artifact(s) to the local repository. The Install Plugin
+                     uses the information in the POM (groupId, artifactId,
+                     version) to determine the proper location for the artifact
+                     within the local repository. -->
+                <plugin>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>${version.maven-install-plugin}</version>
+                </plugin>
+                <!-- This plugin is used to release a project with Maven, saving
+                     a lot of repetitive, manual work. Releasing a project is
+                     made in two steps: prepare and perform. -->
+                <plugin>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>${version.maven-release-plugin}</version>
+                    <configuration>
+                        <tagNameFormat>@{project.version}</tagNameFormat>
+                        <preparationGoals>clean install</preparationGoals>
+                        <useReleaseProfile>false</useReleaseProfile>
+                        <releaseProfiles>release</releaseProfiles>
+                        <autoVersionSubmodules>true</autoVersionSubmodules>
+                    </configuration>
+                </plugin>
+                <!-- The Resources Plugin handles the copying of project
+                     resources to the output directory. -->
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${version.maven-resources-plugin}</version>
+                </plugin>
+                <!-- The Site Plugin is used to generate a site for the project.
+                     The generated site also includes the project's reports that
+                     were configured in the POM. -->
+                <plugin>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>${version.maven-site-plugin}</version>
+                </plugin>
+                <!-- The Source Plugin creates a jar archive of the source files
+                     of the current project. The jar file is, by default,
+                     created in the project's target directory. -->
+                <plugin>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${version.maven-source-plugin}</version>
+                </plugin>
+                <!-- The Surefire Plugin is used during the test phase of the
+                     build lifecycle to execute the unit tests of an
+                     application. -->
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${version.maven-surefire-plugin}</version>
+                </plugin>
+                <!-- The WAR Plugin is responsible for collecting all artifact
+                     dependencies, classes and resources of the web application
+                     and packaging them into a web application archive. -->
+                <plugin>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>${version.maven-war-plugin}</version>
+                </plugin>
+
+                <!-- CODE QUALITY CHECK -->
+                <!-- The JXR Plugin produces a cross-reference of the
+                     project's sources. The generated reports make it easier
+                     for the user to reference or find specific lines of
+                     code. It is also handy when used with the PMD Plugin
+                     for referencing errors found in the code -->
+                <plugin>
+                    <artifactId>maven-jxr-plugin</artifactId>
+                    <version>${version.maven-jxr-plugin}</version>
+                </plugin>
+                <!-- The Checkstyle Plugin generates a report regarding the
+                     code style used by the developers. -->
+                <plugin>
+                    <artifactId>maven-checkstyle-plugin</artifactId>
+                    <version>${version.maven-checkstyle-plugin}</version>
+                    <configuration>
+                        <consoleOutput>true</consoleOutput>
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.puppycrawl.tools</groupId>
+                            <artifactId>checkstyle</artifactId>
+                            <version>${version.checkstyle}</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+                <!-- The PMD Plugin allows you to automatically run the PMD
+                     code analysis tool on your project's source code and
+                     generate a site report with its results. It also
+                     supports the separate Copy/Paste Detector tool (or CPD)
+                     distributed with PMD. -->
+                <plugin>
+                    <artifactId>maven-pmd-plugin</artifactId>
+                    <version>${version.maven-pmd-plugin}</version>
+                    <configuration>
+                        <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+                        <verbose>true</verbose>
+                        <targetJdk>${maven.compiler.target}</targetJdk>
+                    </configuration>
+                </plugin>
+                <!-- FindBugs looks for bugs in Java programs. It is based
+                     on the concept of bug patterns. A bug pattern is a code
+                     idiom that is often an error. -->
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>findbugs-maven-plugin</artifactId>
+                    <version>${version.findbugs-maven-plugin}</version>
+                    <configuration>
+                        <threshold>Low</threshold>
+                        <effort>Max</effort>
+                        <findbugsXmlOutput>true</findbugsXmlOutput>
+                    </configuration>
+                </plugin>
+
+                <!-- FUNCTIONAL CHECK -->
+                <!-- The Failsafe Plugin is designed to run integration
+                     tests while the Surefire Plugins is designed to run
+                     unit tests. The name (failsafe) was chosen both because
+                     it is a synonym of surefire and because it implies that
+                     when it fails, it does so in a safe way. -->
+                <plugin>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>${version.maven-failsafe-plugin}</version>
+                    <configuration>
+                        <parallel>classes</parallel>
+                        <threadCountClasses>1</threadCountClasses>
+                        <perCoreThreadCount>true</perCoreThreadCount>
+                    </configuration>
+                </plugin>
+                <!-- A plugin for downloading and installing phantomjs. -->
+                <plugin>
+                    <groupId>com.github.klieber</groupId>
+                    <artifactId>phantomjs-maven-plugin</artifactId>
+                    <version>${version.phantomjs-maven-plugin}</version>
+                    <configuration>
+                        <version>${version.phantomjs}</version>
+                    </configuration>
+                </plugin>
+                <!-- Cargo is a thin wrapper that allows you to
+                     manipulate Java EE containers in a standard
+                     way. -->
+                <plugin>
+                    <groupId>org.codehaus.cargo</groupId>
+                    <artifactId>cargo-maven2-plugin</artifactId>
+                    <version>${version.cargo-maven2-plugin}</version>
+                    <configuration>
+                        <skip>${skipTests}</skip>
+                    </configuration>
+                </plugin>
+
+                <!-- CODE COVERAGE CHECK -->
+                <!-- The JaCoCo Maven plug-in provides the JaCoCo runtime
+                     agent to your tests and allows basic report
+                     creation. -->
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${version.jacoco-maven-plugin}</version>
+                    <configuration>
+                        <rules>
+                            <rule>
+                                <element>BUNDLE</element>
+                                <limits>
+                                    <limit>
+                                        <counter>INSTRUCTION</counter>
+                                        <value>COVEREDRATIO</value>
+                                        <minimum>0.99</minimum>
+                                    </limit>
+                                    <limit>
+                                        <counter>LINE</counter>
+                                        <value>COVEREDRATIO</value>
+                                        <minimum>0.99</minimum>
+                                    </limit>
+                                    <limit>
+                                        <counter>BRANCH</counter>
+                                        <value>COVEREDRATIO</value>
+                                        <minimum>1.00</minimum>
+                                    </limit>
+                                    <limit>
+                                        <counter>COMPLEXITY</counter>
+                                        <value>COVEREDRATIO</value>
+                                        <minimum>0.99</minimum>
+                                    </limit>
+                                    <limit>
+                                        <counter>METHOD</counter>
+                                        <value>COVEREDRATIO</value>
+                                        <minimum>0.99</minimum>
+                                    </limit>
+                                    <limit>
+                                        <counter>CLASS</counter>
+                                        <value>MISSEDCOUNT</value>
+                                        <maximum>0</maximum>
+                                    </limit>
+                                </limits>
+                            </rule>
+                        </rules>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <!-- More project information -->
+    <name>Satisfy</name>
+    <description>
+        Satisfy is test automation framework.
+    </description>
+    <url>http://satisfy.tapack.io</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>Tapack Software</name>
+        <url>http://www.tapack.io</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>mike.dolinin</id>
+            <name>Mike Dolinin</name>
+            <email>mdolinin@tapack.io</email>
+            <organization>Tapack Software</organization>
+            <organizationUrl>http://www.tapack.io</organizationUrl>
+            <roles>
+                <role>Architect</role>
+                <role>Developer</role>
+            </roles>
+            <timezone>+2</timezone>
+        </developer>
+    </developers>
+
+    <!-- Environment settings -->
+    <issueManagement>
+        <system>JIRA</system>
+        <url>https://issues.tapack.io</url>
+    </issueManagement>
+
+    <ciManagement>
+        <system>Bamboo</system>
+        <url>https://ci.tapack.io</url>
+    </ciManagement>
+
+    <scm>
+        <connection>scm:git:ssh://git@github.com/tapack/satisfy.git
+        </connection>
+        <developerConnection>
+            scm:git:ssh://git@github.com/tapack/satisfy.git
+        </developerConnection>
+        <url>https://github.com/tapack/satisfy.git</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>bintray</id>
+            <url>https://api.bintray.com/maven/mdolinin/maven/Satisfy</url>
+        </repository>
+    </distributionManagement>
+
+    <!-- Describes the prerequisites a project can have. -->
+    <prerequisites>
+        <maven>3.2.3]</maven>
+    </prerequisites>
+
+    <profiles>
+        <!-- Code coverage check profile -->
+        <profile>
+            <id>build-with-code-coverage-check</id>
+            <!-- Build settings -->
+            <build>
+                <plugins>
+                    <!-- The JaCoCo Maven plug-in provides the JaCoCo runtime
+                         agent to your tests and allows basic report
+                         creation. -->
+                    <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>prepare-agent</id>
+                                <goals>
+                                    <goal>prepare-agent</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>report</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>report</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>check</id>
+                                <goals>
+                                    <goal>check</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <!-- Code quality check profile -->
+        <profile>
+            <id>build-with-code-quality-check</id>
+            <!-- Build settings -->
+            <build>
+                <plugins>
+                    <!-- The JXR Plugin produces a cross-reference of the
+                         project's sources. The generated reports make it easier
+                         for the user to reference or find specific lines of
+                         code. It is also handy when used with the PMD Plugin
+                         for referencing errors found in the code -->
+                    <plugin>
+                        <artifactId>maven-jxr-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jxr</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- The Checkstyle Plugin generates a report regarding the
+                         code style used by the developers. -->
+                    <plugin>
+                        <artifactId>maven-checkstyle-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>check</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- The PMD Plugin allows you to automatically run the PMD
+                         code analysis tool on your project's source code and
+                         generate a site report with its results. It also
+                         supports the separate Copy/Paste Detector tool (or CPD)
+                         distributed with PMD. -->
+                    <plugin>
+                        <artifactId>maven-pmd-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>check</goal>
+                                    <goal>cpd-check</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- FindBugs looks for bugs in Java programs. It is based
+                         on the concept of bug patterns. A bug pattern is a code
+                         idiom that is often an error. -->
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>findbugs-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>check</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <!-- Functional check profile -->
+        <profile>
+            <id>build-with-functional-check</id>
+            <!-- Build settings -->
+            <build>
+                <plugins>
+                    <!-- The Failsafe Plugin is designed to run integration
+                         tests while the Surefire Plugins is designed to run
+                         unit tests. The name (failsafe) was chosen both because
+                         it is a synonym of surefire and because it implies that
+                         when it fails, it does so in a safe way. -->
+                    <plugin>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>integration-test</goal>
+                                    <goal>verify</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- A plugin for downloading and installing phantomjs. -->
+                    <plugin>
+                        <groupId>com.github.klieber</groupId>
+                        <artifactId>phantomjs-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>install</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <!-- Sonatype OSS Repository Hosting -->
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <!-- The Apache Maven Javadoc Plugin is a plugin that uses
+                         the javadoc tool for generating javadocs for the
+                          specified project. -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <phase>none</phase>
+                            </execution>
+                            <execution>
+                                <id>attach-javadocs-jdk1.8</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                                <configuration>
+                                    <additionalparam>-Xdoclint:none</additionalparam>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>
