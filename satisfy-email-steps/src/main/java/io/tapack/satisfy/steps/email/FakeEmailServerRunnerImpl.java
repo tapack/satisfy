@@ -1,6 +1,6 @@
 package io.tapack.satisfy.steps.email;
 
-import com.icegreen.greenmail.AbstractServer;
+import com.icegreen.greenmail.server.AbstractServer;
 import com.icegreen.greenmail.util.GreenMail;
 import com.icegreen.greenmail.util.ServerSetup;
 import io.tapack.satisfy.email.props.PropertyAccessor;
