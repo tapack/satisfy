@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <title>Satisfy Test Framework</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body data-spy="scroll">
+
+    <!---//Facebook button code-->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- ******HEADER****** -->
+    <header id="header" class="header">
+        <div class="container">
+            <h1 class="logo pull-left">
+                <a class="scrollto" href="#promo">
+                    <span class="logo-title">Satisfy</span>
+                </a>
+            </h1><!--//logo-->
+            <nav id="main-nav" class="main-nav navbar-right" role="navigation">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button><!--//nav-toggle-->
+                </div><!--//navbar-header-->
+                <div class="navbar-collapse collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#about">About</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#features">Features</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#docs">Docs</a></li>
+                        <!-- <li class="nav-item"><a class="scrollto" href="#license">License</a></li>                         -->
+                        <li class="nav-item last"><a class="scrollto" href="#contact">Contact</a></li>
+                    </ul><!--//nav-->
+                </div><!--//navabr-collapse-->
+            </nav><!--//main-nav-->
+        </div>
+    </header><!--//header-->
+
+    <!-- ******PROMO****** -->
+    <section id="promo" class="promo section offset-header">
+        <div class="container text-center">
+            <h2 class="title"><span class="highlight">Satisfy</span></h2>
+            <p class="intro">easy-to-use high-performance testing platform for the development and delivery of applications</p>
+            <div class="btns">
+                <a class="btn btn-cta-secondary" href="https://github.com/tapack/satisfy-examples" target="_blank">Examples</a>
+                <a class="btn btn-cta-primary" href="http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22io.tapack%22%20AND%20a%3A%22satisfy%22" target="_blank">Maven Central</a>
+            </div>
+            <ul class="meta list-inline">
+                <li><a href="https://github.com/tapack/satisfy" target="_blank">View on Github</a></li>
+                <li>Created by: <a href="http://tapack.io/" target="_blank">Tapack Software</a></li>
+            </ul><!--//meta-->
+        </div><!--//container-->
+        <div class="social-media">
+            <div class="social-media-inner container text-center">
+                <ul class="list-inline">
+                    <li class="twitter-follow"><a href="https://twitter.com/tapack_io" class="twitter-follow-button" data-show-count="false">Follow @tapack_io</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </li><!--//twitter-follow-->
+                    <li class="twitter-tweet">
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-via="tapack_io" data-hashtags="satisfy_tapack_io">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </li><!--//twitter-tweet -->
+                    <li>
+                    	<a href="https://maven-badges.herokuapp.com/maven-central/io.tapack/satisfy">
+                    		<img style="vertical-align:baseline" src="https://maven-badges.herokuapp.com/maven-central/io.tapack/satisfy/badge.svg">
+                    	</a>
+                    </li>
+                    <!-- <li class="facebook-like">
+                         <div class="fb-like" data-href="http://themes.3rdwavemedia.com/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+                    </li> --><!--//facebook-like-->
+                    <!--// Generate github buttons: https://github.com/mdo/github-buttons -->
+                    <!-- <li class="github-star"><iframe src="http://ghbtns.com/github-btn.html?user=mdo&repo=github-buttons&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe></li>
+                    <li class="github-fork"><iframe src="http://ghbtns.com/github-btn.html?user=mdo&repo=github-buttons&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="53" height="20"></iframe></li> -->
+                    <!--//
+                    <li class="github-follow"><iframe src="http://ghbtns.com/github-btn.html?user=mdo&type=follow&count=true"
+  allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe></li>
+                    -->
+                </ul>
+            </div>
+        </div>
+    </section><!--//promo-->
+
+    <!-- ******ABOUT****** -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="title text-center">What is Satisfy?</h2>
+            <p class="intro text-center">Satisfy is the world’s most advanced software testing platform for testing complex applications and redefining what people can do without programming knowledge. Using Satisfy makes it easy for developers bring to life the next generation of rich, interactive applications. It's goal is to enable an easy-to-use high-performance testing platform for the development and delivery of applications.</p>
+            <div class="row">
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">User-friendly</h3>
+                        <p>Framework allows users with non-programming skills implement in quick way functional tests.</p>
+                    </div><!--//content-->
+                </div><!--//item-->
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Time saver</h3>
+                        <p>Super-fast test execution. Parallel test execution and headless browsers supported out of the box.</p>
+                    </div><!--//content-->
+                </div><!--//item-->
+				<div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Designed for quality</h3>
+                        <p>Uses <a href="http://behaviourdriven.org/Introduction" target="_blank">Behaviour-Driven Development (BDD)</a> and aims to make development practices more accessible and intuitive to newcomers and experts alike.</p>
+                    </div><!--//content-->
+                </div><!--//item-->
+                <div class="clearfix visible-md"></div>
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-tablet"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Analyze-friendly</h3>
+                        <p>Uses the test results to produce illustrated, narrative reports that document and describe what your application does and how it works.</p>
+                    </div><!--//content-->
+                </div><!--//item-->
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-code"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Easy to start</h3>
+                        <p>All is required to use framework capabilities is including dependencies in pom.xml file.</p>
+                    </div><!--//content-->
+                </div><!--//item-->
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-sitemap"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Modular structure</h3>
+                        <p>Choose only those modules that you need. And extend them if you need something specific.</p>
+                    </div><!--//content-->
+                </div><!--//item-->
+            </div><!--//row-->
+        </div><!--//container-->
+    </section><!--//about-->
+
+    <!-- ******FEATURES****** -->
+    <section id="features" class="features section">
+        <div class="container text-center">
+            <h2 class="title">Features</h2>
+            <ul class="feature-list list-unstyled">
+            	<li><i class="fa fa-check"></i> Easy to use for non-developers</li>
+                <li><i class="fa fa-check"></i> Interact with any Web UI</li>
+                <li><i class="fa fa-check"></i> Auto generated reports</li>
+                <li><i class="fa fa-check"></i> Parallel test execution</li>
+                <li><i class="fa fa-check"></i> Extendable throw SPI</li>
+                <li><i class="fa fa-check"></i> Ready to use out of the box</li>
+                <li><i class="fa fa-check"></i> Built on <a href="http://jbehave.org" target="_blank">JBehave</a> and <a href="http://www.thucydides.info" target="_blank">Thucydides</a></li>
+                <li><i class="fa fa-check"></i> Compatible with all modern browsers</li>
+            </ul>
+        </div><!--//container-->
+    </section><!--//features-->
+
+    <!-- ******DOCS****** -->
+    <section id="docs" class="docs section">
+        <div class="container">
+            <div class="docs-inner">
+            <h2 class="title text-center">Get Started</h2>
+            <div class="block">
+                <h3 class="sub-title text-center">BDD</h3>
+                <p><a href="http://jbehave.org" target="_blank">Jbehave</a> is used as the BDD framework here.</p>
+                <p>Behaviour-Driven Development encourages you to start defining the stories via scenarios that express the desired behaviour in a textual format, e.g</p>
+                <div class="code-block">
+                    <pre><code class="language-gherkin">
+    Scenario: use page steps
+	When open 'static-example.html' page
+	Then page has 'Static Example' title
+                     </code></pre>
+                </div><!--//code-block-->
+            </div><!--//block-->
+
+            <div class="block">
+                <h3 class="sub-title text-center">Maven</h3>
+                <p>Project is Maven based. Just add one dependency to your pom.xml</p>
+                <div class="code-block">
+                    <pre><code class="language-markup">
+	&lt;dependency&gt;
+        &lt;groupId&gt;io.tapack&lt;/groupId&gt;
+        &lt;artifactId&gt;satisfy-web-steps&lt;/artifactId&gt;
+        &lt;version&gt;0.6.6&lt;/version&gt;
+    &lt;/dependency&gt;
+                    </code></pre>
+                </div><!--//code-block-->
+            </div><!--//block-->
+
+            <div class="block">
+                <h3 class="sub-title text-center">Modules</h3>
+                <p>List of available out of the box:</p>
+                <ul class="list-unstyled">
+                    <li><strong>Web steps</strong></li>
+                    <li><strong>Data steps</strong></li>
+                    <li><strong>SOAP steps</strong></li>
+                    <li><strong>REST steps</strong></li>
+                    <li><strong>File steps</strong></li>
+                    <li><strong>Email steps</strong></li>
+                </ul>
+                <p>To use one of them just add dependency to your pom.xml</p>
+                <div class="code-block">
+                    <pre><code class="language-markup">
+	&lt;dependency&gt;
+        &lt;groupId&gt;io.tapack&lt;/groupId&gt;
+        &lt;artifactId&gt;satisfy-soap-steps&lt;/artifactId&gt;
+        &lt;version&gt;0.6.6&lt;/version&gt;
+    &lt;/dependency&gt;
+                    </code></pre>
+                </div><!--//code-block-->
+                <div class="code-block">
+                    <pre><code class="language-markup">
+	&lt;dependency&gt;
+        &lt;groupId&gt;io.tapack&lt;/groupId&gt;
+        &lt;artifactId&gt;satisfy-rest-steps&lt;/artifactId&gt;
+        &lt;version&gt;0.6.6&lt;/version&gt;
+    &lt;/dependency&gt;
+                    </code></pre>
+                </div><!--//code-block-->
+                <div class="code-block">
+                    <pre><code class="language-markup">
+	&lt;dependency&gt;
+        &lt;groupId&gt;io.tapack&lt;/groupId&gt;
+        &lt;artifactId&gt;satisfy-file-steps&lt;/artifactId&gt;
+        &lt;version&gt;0.6.6&lt;/version&gt;
+    &lt;/dependency&gt;
+                    </code></pre>
+                </div><!--//code-block-->
+                <div class="code-block">
+                    <pre><code class="language-markup">
+	&lt;dependency&gt;
+        &lt;groupId&gt;io.tapack&lt;/groupId&gt;
+        &lt;artifactId&gt;satisfy-email-steps&lt;/artifactId&gt;
+        &lt;version&gt;0.6.6&lt;/version&gt;
+    &lt;/dependency&gt;
+                    </code></pre>
+                </div><!--//code-block-->
+            </div><!--//block-->
+
+            </div><!--//docs-inner-->
+        </div><!--//container-->
+    </section><!--//features-->
+
+    <!-- ******LICENSE****** -->
+    <!-- <section id="license" class="license section">
+        <div class="container">
+            <div class="license-inner">
+            <h2 class="title text-center">License</h2>
+                <div class="info">
+                    <p>This Bootstrap theme is made by UX designer <a href="https://www.linkedin.com/in/xiaoying" target="_blank">Xiaoying Riley</a> at 3rd Wave Media for developers and is <strong>100% FREE</strong> under the <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons Attribution 3.0 License (CC BY 3.0)</a></p>
+                    <p><strong>[Tip for developers]:</strong> If your project is open source, you might want to put a <a href="https://www.paypal.com/us/cgi-bin/?cmd=_donate-intro-outside" target="_blank">PayPal "Donate" button</a> below so your users can express their gratitude. If your project is commercial, you can put a <a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_singleitem-intro-outside" target="_blank">PayPal "Buy Now" button</a> instead.</p>
+                </div><!--//info-->
+                <!-- <div class="cta-container">
+                    <div class="speech-bubble">
+                        <p class="intro">If you are feeling generous and want to show your support to Xiaoying, you can buy her a beer or coffee via the PayPal donate button below. :)</p>
+                        <div class="icon-holder  text-center"><i class="fa fa-smile-o"></i></div>
+                    </div><!--//speech-bubble-->
+                    <!-- <div class="btn-container  text-center">
+                        <!--//You need to generate your own PayPal button - https://www.paypal.com/us/cgi-bin/?cmd=_donate-intro-outside -->
+                        <!--PayPal generated code starts-->
+                        <!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="Y46LJNXGAVVWW">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+                        </form> -->
+                        <!--//PayPal generated code ends-->
+
+                    <!-- </div><!--//btn-container-->
+                <!-- </div><!--//cta-container-->
+            <!-- </div><!--//license-inner-->
+        <!-- </div><!--//container-->
+    <!-- </section> --><!--//how-->
+
+    <!-- ******CONTACT****** -->
+    <section id="contact" class="contact section has-pattern">
+        <div class="container">
+            <div class="contact-inner">
+                <h2 class="title  text-center">Contact</h2>
+                <p class="intro  text-center">I hope you find this framework useful. <br />Feel free to get in touch if you have any questions or suggestions.</p>
+               <!--  <div class="author-message">
+                    <div class="profile">
+                        <img class="img-responsive" src="assets/images/profile.png" alt="" />
+                    </div><!--//profile-->
+                   <!--  <div class="speech-bubble">
+                        <h3 class="sub-title">Want to get more freebies in the future?</h3>
+                        <p>I tweet about #UX and #webdev related resources/content at <a href="https://twitter.com/3rdwave_themes" target="_blank">@3rdwave_themes</a>
+                        <p>If you like what I do, you can follow me on twitter and I will keep you informed about my next free template there :)</p>
+                        <p><strong>[Tip for developers]:</strong> If you take on freelance work you can put a tailored message here about your availability to attract potential clients. Be creative and good luck!</p>
+                        <div class="source">
+                            <span class="name"><a href="https://twitter.com/3rdwave_themes" target="_blank">Xiaoying Riley</a></span>
+                            <br />
+                            <span class="title">UX/UI Designer</span>
+                        </div><!--//source-->
+                    <!-- </div><!--//speech-bubble-->
+                <!-- </div> --><!--//author-message-->
+                <div class="clearfix"></div>
+                <div class="info text-center">
+                    <h4 class="sub-title">Get Connected</h4>
+                    <ul class="social-icons list-inline">
+                        <li><a href="https://twitter.com/tapack_io" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <!-- <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>    -->
+                        <li class="last"><a href="mailto: tapackservice@gmail.com"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div><!--//info-->
+            </div><!--//contact-inner-->
+        </div><!--//container-->
+    </section><!--//contact-->
+
+    <!-- ******FOOTER****** -->
+    <footer class="footer">
+        <div class="container text-center">
+            <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-47283125-2', 'auto');
+		ga('send', 'pageview');
+	</script>
+</body>
+</html>
