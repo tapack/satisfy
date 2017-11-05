@@ -332,8 +332,8 @@
         <version.jetty-maven-plugin>9.2.11.M0</version.jetty-maven-plugin>
         <!-- Browser for tests: chrome, firefox, htmlunit, ie, phantomjs -->
         <browser>phantomjs</browser>
-        <version.phantomjs>1.9.8</version.phantomjs>
-        <version.phantomjs-maven-plugin>0.5</version.phantomjs-maven-plugin>
+        <version.phantomjs>2.1.1</version.phantomjs>
+        <version.phantomjs-maven-plugin>0.7</version.phantomjs-maven-plugin>
 
         <!-- CODE COVERAGE CHECK -->
         <version.jacoco-maven-plugin>0.7.4.201502262128</version.jacoco-maven-plugin>
@@ -649,11 +649,8 @@
     </ciManagement>
 
     <scm>
-        <connection>scm:git:ssh://git@github.com/tapack/satisfy.git
-        </connection>
-        <developerConnection>
-            scm:git:ssh://git@github.com/tapack/satisfy.git
-        </developerConnection>
+        <connection>scm:git:ssh://git@github.com/tapack/satisfy.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/tapack/satisfy.git</developerConnection>
         <url>https://github.com/tapack/satisfy.git</url>
         <tag>HEAD</tag>
     </scm>

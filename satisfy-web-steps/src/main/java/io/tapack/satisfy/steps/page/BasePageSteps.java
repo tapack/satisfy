@@ -41,7 +41,6 @@ public class BasePageSteps implements PageSteps {
                     .getProperty(WebProperty.WEBDRIVER_BASE_URL);
             webPage.openAt(baseUrl + path);
         }
-        webPage.getDriver().manage().window().maximize();
     }
 
     @Override
