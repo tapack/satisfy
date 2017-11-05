@@ -4,7 +4,7 @@
     <parent>
         <groupId>io.tapack</groupId>
         <artifactId>satisfy-plugins</artifactId>
-        <version>0.6.6-SNAPSHOT</version>
+        <version>0.6.6</version>
     </parent>
     <artifactId>satisfy-maven-plugin</artifactId>
     <packaging>maven-plugin</packaging>
