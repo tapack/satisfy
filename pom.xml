@@ -321,7 +321,7 @@
 
         <!-- CODE QUALITY CHECK -->
         <!-- Code quality check maven plugin versions -->
-        <version.checkstyle>6.6</version.checkstyle>
+        <version.checkstyle>8.29</version.checkstyle>
         <version.findbugs-maven-plugin>3.0.1</version.findbugs-maven-plugin>
         <version.findbugs-annotations>1.0.0</version.findbugs-annotations>
 
