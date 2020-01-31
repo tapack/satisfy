@@ -278,7 +278,7 @@
         <version.commons-lang3>3.3.2</version.commons-lang3>
         <version.commons-exec>1.3</version.commons-exec>
         <version.reflections>0.9.9</version.reflections>
-        <version.httpclient>4.3.3</version.httpclient>
+        <version.httpclient>4.3.6</version.httpclient>
         <version.phantomjsdriver>1.2.1</version.phantomjsdriver>
         <version.operadriver>1.4</version.operadriver>
         <version.commons-fileupload>1.3</version.commons-fileupload>
