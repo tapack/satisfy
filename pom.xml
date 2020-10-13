@@ -268,7 +268,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <!-- Satisfy Frameworks Dependencies -->
-        <version.junit>4.11</version.junit>
+        <version.junit>4.13.1</version.junit>
         <version.thucydides>0.9.275</version.thucydides>
         <version.jbehave-core>3.9.3</version.jbehave-core>
         <version.jbehave-junit-runner>1.1.2</version.jbehave-junit-runner>
